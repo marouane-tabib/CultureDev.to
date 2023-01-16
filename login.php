@@ -9,7 +9,8 @@
     <title>Sign In</title>
 </head>
 <body>
-    <div class="mx-auto mt-5 col-md-5 col-11">
+    <div class="login-box mx-auto mt-5 col-md-5 col-11">
+        <h3>Log In</h3><hr>
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
