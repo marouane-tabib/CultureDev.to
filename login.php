@@ -21,7 +21,10 @@
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-text mb-3">You Need an Account ? <a href="logout.php">Log Out </a>Now</div>
+            <div class="btn-box">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>

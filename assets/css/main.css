@@ -1,6 +1,10 @@
 body {
   background-color: #eee;
 }
+body .login-box .btn-box {
+  display: flex;
+  justify-content: end;
+}
 
 .login-box {
   padding: 10px 20px;
