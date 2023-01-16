@@ -1,10 +1,4 @@
 body{
     background-color: #eee;
-    .login-box{
-        .btn-box{
-            display: flex;
-            justify-content: end;
-        }
-    }
 }
-@import 'components/login-form';
+@import 'components/data-forms';

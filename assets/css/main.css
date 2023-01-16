@@ -1,15 +1,15 @@
 body {
   background-color: #eee;
 }
-body .login-box .btn-box {
-  display: flex;
-  justify-content: end;
-}
 
-.login-box {
+.data-form-box {
   padding: 10px 20px;
   background: #F4F4F4;
   border-radius: 5px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   border: 0.7px solid rgba(204, 204, 204, 0.3333333333);
+}
+.data-form-box .btn-box {
+  display: flex;
+  justify-content: end;
 }
