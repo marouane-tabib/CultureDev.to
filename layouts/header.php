@@ -12,4 +12,6 @@
     <title><?php if(isset($title)){ echo $title; }else{ echo "Home";} ?></title>
 </head>
 <body>
+    <?php if(!isset($fade)){ ?>
     <?php include'../components/nav-bar.php'; ?>
+    <?php } ?>
