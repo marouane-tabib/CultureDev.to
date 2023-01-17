@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 body {
+  font-family: roboto !important;
   height: 100%;
   background: url("../img/bg.jpg");
 }
@@ -16,13 +18,12 @@ body::before {
 
 .data-form-box {
   padding: 10px 20px;
-  background: #F4F4F4;
   border-radius: 5px;
   border: 0.7px solid rgba(204, 204, 204, 0.2666666667);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2666666667);
-  background: rgba(204, 204, 204, 0.5333333333) !important;
+  background: #CCC !important;
   color: #222;
 }
 .data-form-box h1 {
