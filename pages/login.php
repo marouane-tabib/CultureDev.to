@@ -1,7 +1,7 @@
 <?php $title = "Log In" ; $fade = true ?>
 <?php include'../layouts/header.php'; ?>
-    <div class="data-form-box bg-white mx-auto mt-5 col-md-5 col-11">
-        <h3>Log In</h3><hr>
+    <div class="data-form-box bg-white mx-auto mt-5 col-md-6 col-12">
+        <h1>Log In</h1><hr>
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
