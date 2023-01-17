@@ -1,6 +1,6 @@
 <?php $title = "Register" ; $fade = true?>
 <?php include'../layouts/header.php'; ?>
-    <div class="data-form-box bg-white mx-auto mt-5 col-md-5 col-11">
+    <div class="data-form-box bg-white mx-auto mt-5 col-md-6 col-11">
         <h3>Log Out</h3><hr>
         <form>
             <div class="row">

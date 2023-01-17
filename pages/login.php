@@ -11,7 +11,7 @@
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
-            <div class="form-text mb-3">You Need an Account ? <a href="logout.php">Log Out </a>Now</div>
+            <div class="form-text mb-3">You Need an Account ? <a href="register.php">Register</a> Now</div>
             <div class="btn-box">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
