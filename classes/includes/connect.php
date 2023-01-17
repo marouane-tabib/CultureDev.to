@@ -6,7 +6,7 @@ class DB{
     function __construct()
     {
         try {
-            $this->pdo = new PDO("mysql:host=localhost;dbname=youcode_quiz_quizizy", "root", "");
+            $this->pdo = new PDO("mysql:host=localhost;dbname=youcode_gestion_blog_culturedev", "root", "");
         } catch (PDOException $e) {
             die("ERROR: Could not connect. " . $e->getMessage());
         }
