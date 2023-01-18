@@ -3,8 +3,8 @@
     class User extends database{
     function login($username , $password){
         // *** Change username to login 
-        $username = htmlspecialchars(strip_tags($password));
-        $password = htmlspecialchars(strip_tags($username));
+        $username = htmlspecialchars(strip_tags($username));
+        $password = htmlspecialchars(strip_tags($password));
 
         // Patterns ...
         $passPattern = '/^[a-zA-Z][0-9a-zA-Z_]{2,23}[0-9a-zA-Z]$/';
@@ -26,14 +26,16 @@
             $b->select("users","*","user_name='$username' AND password='$password'");
             $sql = $b->sql;
             $result = mysqli_fetch_assoc($sql);
-    
+            
             if (isset($result)) {
                 $this->sessionGenerator();
                 $_SESSION['user'] = $username;
-                header("location:../index.php");
+                // header("location:../index.php");
+                echo "location to index.php page";
             } else {
                 $this->sessionGenerator("issue" , "No recorde register , check your password or username");
-                header("location:../login.php");die();
+                echo "No recorde register , check your password or username";
+                // header("location:../login.php");die();
             } 
             // $conn->close();
         }else{
