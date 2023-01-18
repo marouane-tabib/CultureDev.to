@@ -1,8 +1,14 @@
 <?php $title = "Log In" ; $fade = true ?>
+<?php 
+    include '../classes/User.php';
+    $user = new User();
+
+    $user->login("admin" , "admin");
+?>
 <?php include'../layouts/header.php'; ?>
     <div class="data-form-box bg-white mx-auto mt-5 col-md-6 col-12">
         <h1>Log In</h1><hr>
-        <form>
+        <form action="POST" method="login.php">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
