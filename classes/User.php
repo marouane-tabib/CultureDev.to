@@ -31,15 +31,40 @@
             header("location:login.php");die();
         }
     }
-        public function register($firstName , $lastName , $password , $confirmPassword){
+        public function register($firstName , $lastName , $userName , $password , $confirmPassword){
             $firstName = htmlspecialchars(strip_tags($firstName));
             $lastName = htmlspecialchars(strip_tags($lastName));
+            $userName = htmlspecialchars(strip_tags($userName));
             $password = htmlspecialchars(strip_tags($password));
             $confirmPassword = htmlspecialchars(strip_tags($confirmPassword));
-            // 
+            
+            echo "you in the register method | ";
+            // Patterns ...
+            $passPattern = '/^[a-zA-Z][0-9a-zA-Z_]{2,23}[0-9a-zA-Z]$/';
+            $usernamePattern = '/^[a-z\d_]{5,20}$/i';
+            
+            if($password === $confirmPassword){
+                if(preg_match($usernamePattern, $firstName)  && preg_match($usernamePattern, $lastName) && preg_match($usernamePattern, $userName) && preg_match($passPattern, $password) && preg_match($passPattern, $confirmPassword)){
+                    $readyRegister = $this->readyRegisterChecker();
+                    if($readyRegister){ echo "ready register it | "; }
+                    $password = md5($password);
+                    
+                    $a = new database();
+                    $a->insert('users',['first_name'=>$firstName,'last_name'=>$lastName,'user_name'=>$userName,'password'=>$password]);
+                    if ($a == true) {
+                        // header('location:index.php');
+                        // echo "Account created successfully";
+                    }
+                }
+            }else { echo "Check your pasword"; }
+
         }
         public function logOut(){
             // 
+        }
+
+        public function readyRegisterChecker(){
+                return true;
         }
         
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
