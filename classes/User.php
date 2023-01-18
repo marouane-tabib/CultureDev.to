@@ -21,14 +21,13 @@
             if (isset($result)) {
                 $this->sessionGenerator();
                 $_SESSION['user'] = $username;
-                // header("location:../index.php");
+                header("location:../index.php");
                 echo "location to index.php page";
             } else {
                 $this->sessionGenerator("issue" , "No recorde register , check your password or username");
                 echo "No recorde register , check your password or username";
-                // header("location:../login.php");die();
-            } 
-            // $conn->close();
+                header("location:login.php");die();
+            }
         }else{
             $this->sessionGenerator("issue" , "Please check your information");
             header("location:../login.php");die();
