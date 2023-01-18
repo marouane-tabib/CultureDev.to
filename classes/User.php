@@ -31,7 +31,11 @@
             header("location:login.php");die();
         }
     }
-        public function register(){
+        public function register($firstName , $lastName , $password , $confirmPassword){
+            $firstName = htmlspecialchars(strip_tags($firstName));
+            $lastName = htmlspecialchars(strip_tags($lastName));
+            $password = htmlspecialchars(strip_tags($password));
+            $confirmPassword = htmlspecialchars(strip_tags($confirmPassword));
             // 
         }
         public function logOut(){
