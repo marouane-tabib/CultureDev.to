@@ -30,7 +30,7 @@
           </div>
           <div class="mb-3">
             <label for="description" class="col-form-label">Description:</label>
-            <div id="example"></div>
+            <div id="summernote"></div>
           </div>
         </form>
       </div>
@@ -62,12 +62,23 @@
         </tbody>
     </table>
 </section>
-<link href="../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
-
-    <script> 
-			var editor = new FroalaEditor('#example', {
-  emoticonsUseImage: false
-});
-		</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+        //   ['table', ['table']],
+        //   ['insert', ['link', 'picture', 'video']],
+        //   ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
 <?php include'../layouts/footer.php'; ?>
