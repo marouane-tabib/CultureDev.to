@@ -1,4 +1,11 @@
-<?php include'../layouts/header.php'; ?>
+<?php include '../layouts/header.php'; ?>
+<?php 
+    include '../classes/Article.php';
+    $article = new Article();
+    if(isset($_POST['btn'])){
+      $article->add("test" , 3 , "Just a test");
+    }
+?>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <section class="container">
     <h1>Index Page</h1>
