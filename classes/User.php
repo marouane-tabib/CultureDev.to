@@ -19,9 +19,9 @@
             $result = mysqli_fetch_assoc($sql);
 
             if (isset($result)) {
+                $_SESSION['userInfo'] = $username;
                 $this->sessionGenerator();
-                $_SESSION['user'] = $username;
-                header("location:../index.php");
+                header("location:home.php");
             } else {
                 $this->sessionGenerator("issue" , "No recorde register , check your password or username");
             }
