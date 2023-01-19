@@ -24,11 +24,9 @@
                 header("location:../index.php");
             } else {
                 $this->sessionGenerator("issue" , "No recorde register , check your password or username");
-                // header("location:login.php");die();
             }
         }else{
             $this->sessionGenerator("issue" , "Please check your information");
-            // header("location:login.php");die();
         }
     }
         public function register($firstName , $lastName , $userName , $password , $confirmPassword){
@@ -61,11 +59,9 @@
                         }
                     }
                 }else { 
-                    // echo "Problem in your information";
                     $this->sessionGenerator("issue" , "Please , Check your informations");
                 }
             }else { 
-                // echo "Check your pasword";
                 $this->sessionGenerator("issue" , "Please , Check your pasword"); 
             }
 
@@ -75,15 +71,6 @@
         }
 
         public function readyRegisterChecker($username , $password){
-        
-            // $username = htmlspecialchars(strip_tags($username));
-            // $password = htmlspecialchars(strip_tags($password));
-            
-            // // Patterns ...
-            // $passPattern = '/^[a-zA-Z][0-9a-zA-Z_]{2,23}[0-9a-zA-Z]$/';
-            // $usernamePattern = '/^[a-z\d_]{5,20}$/i';
-            
-            // if(preg_match($usernamePattern, $username) && preg_match($passPattern, $password)){
                 $password = md5($password);
 
                 $b = new database();
@@ -96,10 +83,6 @@
                 }else {
                     return false;
                 }
-
-            // }else{
-            //     return true;
-            // }
         }
         
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
