@@ -54,7 +54,7 @@
                         $a = new database();
                         $a->insert('users',['first_name'=>$firstName,'last_name'=>$lastName,'user_name'=>$userName,'password'=>$password]);
                         if ($a == true) {
-                            header('location:index.php');
+                            header('location:login.php');
                             $this->sessionGenerator("success" , "Account created successfully");
                         }
                     }
