@@ -16,7 +16,7 @@
     <?php include'../components/nav-bar.php'; ?>
     <?php } ?>
             <?php if (isset($_SESSION['action'])): ?>
-            <div class="container <?php echo $_SESSION['action']['class'] ?>" role="alert">
+            <div class="col-md-7 col-11 mx-auto <?php echo $_SESSION['action']['class'] ?>" role="alert">
               <strong><?php echo $_SESSION['action']['status'] ?></strong>
                 <?php 
                   echo $_SESSION['action']['message']; 
