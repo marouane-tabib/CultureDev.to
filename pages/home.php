@@ -6,7 +6,7 @@
     if(isset($_POST['btn'])){
       $article->add($_POST["title"] , $_POST["category"] ,"fake description");
     }
-    if(!isset($_SESSION['userInfo'])){
+    if(!isset($_SESSION['user_info'])){
       header('location:login.php');
     }
 ?>

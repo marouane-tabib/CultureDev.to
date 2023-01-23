@@ -19,7 +19,10 @@
             $result = mysqli_fetch_assoc($sql);
 
             if (isset($result)) {
-                $_SESSION['userInfo'] = $username;
+                $_SESSION['user_info'] = [
+                    "user_id" => $result['id'] , 
+                    "user_name" => $username
+                ];
                 $this->sessionGenerator();
                 header("location:home.php");
             } else {
