@@ -9,10 +9,11 @@
     <form action="home.php" method="POST">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5 mb-1" id="exampleModalLabel">Add Your Article</h1>
+          <i class="fa-solid fa-plus shadow plus-icon" id=""></i>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="accordion p-0" id="accordionExample">
+        <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" id="articleTitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -20,7 +21,7 @@
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
+              <div class="accordion-body p-0">
                 <div class="modal-body">
                       <div class="mb-3">
                         <label for="title" class="col-form-label">Title:</label>
