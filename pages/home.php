@@ -1,10 +1,10 @@
 <?php include '../layouts/header.php'; ?>
 <?php 
     include '../classes/Article.php';
-    session_start();
+    // session_start();
     $article = new Article();
     if(isset($_POST['btn'])){
-      $article->add($_POST["title"] , $_POST["category"] ,"fake description");
+      $article->add($_POST["title"] , $_POST["category"] , $_POST['description']);
     }
     if(!isset($_SESSION['user_info'])){
       header('location:login.php');
