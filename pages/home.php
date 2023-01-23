@@ -33,4 +33,10 @@
         ]
       });
     </script>
+<script>
+  $('#title').on('keyup' , function(){
+    let titleVal = $(this).val();
+    $('#articleTitle').text(titleVal);
+  });
+</script>
 <?php include'../layouts/footer.php'; ?>
