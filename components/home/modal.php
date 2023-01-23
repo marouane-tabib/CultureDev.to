@@ -10,11 +10,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5 mb-1" id="exampleModalLabel">Add Your Article</h1>
-          <i class="fa-solid fa-plus shadow plus-icon" id=""></i>
+          <i class="fa-solid fa-plus shadow" id="add-article-form"></i>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
+          <div class="accordion-item" id="article-form">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" id="articleTitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 Article
