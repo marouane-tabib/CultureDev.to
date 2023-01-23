@@ -1,9 +1,13 @@
 <?php include '../layouts/header.php'; ?>
 <?php 
     include '../classes/Article.php';
+    session_start();
     $article = new Article();
     if(isset($_POST['btn'])){
-      $article->add("test" , 3 , "Just a test");
+      $article->add($_POST["title"] , $_POST["category"] ,"fake description");
+    }
+    if(!isset($_SESSION['userInfo'])){
+      header('location:login.php');
     }
 ?>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">

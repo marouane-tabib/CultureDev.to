@@ -2,7 +2,7 @@
     include 'database.php';
     class User extends database{
     function login($username , $password){
-        
+        session_start();
         $username = htmlspecialchars(strip_tags($username));
         $password = htmlspecialchars(strip_tags($password));
 
