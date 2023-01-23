@@ -12,22 +12,35 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-            <div class="mb-3">
-              <label for="title" class="col-form-label">Title:</label>
-              <input type="text" class="form-control" id="title" name="title" placeholder="Add Articl Title ... ">
+        <div class="accordion p-0" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" id="articleTitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Article
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="title" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Add Articl Title ... ">
+                      </div>
+                      <div class="mb-3">
+                        <label for="category" class="col-form-label">Category:</label>
+                        <select class="form-control" name="category" id="category">
+                            <option disabled selected>Select Your Category</option>
+                            <option value="1">Sports</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="description" class="col-form-label">Description:</label>
+                        <textarea id="summernote" name="description"></textarea>
+                      </div>
+                  </div>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="category" class="col-form-label">Category:</label>
-              <select class="form-control" name="category" id="category">
-                  <option disabled selected>Select Your Category</option>
-                  <option value="1">Sports</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="description" class="col-form-label">Description:</label>
-              <div id="summernote"></div>
-            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
