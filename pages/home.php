@@ -41,6 +41,14 @@
     let titleVal = $(this).val();
     $('#articleTitle').text(titleVal);
   });
+  
+  $('#add-article-form').on('click' , function(){
+    $('#article-form').after($('#article-form').html()).find('#articleTitle').attr('data-bs-target', '#' + i);
+    // $('#article-form').find('#collapseOne').attr({'id': parseInt(i)});
+    // console.log($('#article-form').find('#articleTitle').attr('data-bs-target'));
+    $('#article-form').find('.accordion-collapse').attr({'id': parseInt(i)});
+    console.log(i++);
+  });
 
   // $('#add-article-form').on('click' , function(){
   //   i++;
