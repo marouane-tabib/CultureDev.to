@@ -42,18 +42,18 @@
     $('#articleTitle').text(titleVal);
   });
 
-  $('#add-article-form').on('click' , function(){
-    i++;
-    console.log("test");
-    $('#articleTitle').last().attr('data-bs-target', '#' + i);
-    $('.accordion-collapse').last().attr('id', i);
-    $('#article-form').after(articleForm);
-    // $('#article-form').each(function(){
-    //   $(this).after(articleForm);
-    //   $(this).find('#articleTitle').attr('data-bs-target', '#' + i);
-    //   $(this).find('.accordion-collapse').attr('id', i);
-    // });
+  // $('#add-article-form').on('click' , function(){
+  //   i++;
+  //   console.log("test");
+  //   $('#articleTitle').last().attr('data-bs-target', '#' + i);
+  //   $('.accordion-collapse').last().attr('id', i);
+  //   $('#article-form').after(articleForm);
+  //   // $('#article-form').each(function(){
+  //   //   $(this).after(articleForm);
+  //   //   $(this).find('#articleTitle').attr('data-bs-target', '#' + i);
+  //   //   $(this).find('.accordion-collapse').attr('id', i);
+  //   // });
 
-  });
+  // });
 </script>
 <?php include '../layouts/footer.php'; ?>
