@@ -24,7 +24,7 @@
                         <form action="home.php" method="post" class="d-none" id="delete-article-<?php echo $article['article_id'] ?>" >
                             <input type="hidden" name="deleteArticle" value="<?php echo $article['article_id'] ?>" >
                         </form>
-                        <a href="#" class="col-3 mx-1 btn btn-success"><i class="fa-solid fa-pen fa-xs"></i></a>
+                        <a href="update.php?article_id<?= $article['article_id']?>" class="col-3 mx-1 btn btn-success"><i class="fa-solid fa-pen fa-xs"></i></a>
                     </td>
                 </tr>
             <?php } ?>
