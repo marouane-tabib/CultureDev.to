@@ -17,9 +17,14 @@
         public function show(){
             $b = new database();
             // $b->select("articles","*");
-            $b->select("articles INNER JOIN categories ON articles.category_id = categories.id","* , categories.name category ");
+            $b->select("articles INNER JOIN categories ON articles.category_id = categories.id","* , articles.id article_id , categories.name category ");
             $result = $b->sql;
             return $result;
+        }
+
+        public function destroy($id){
+            $a = new database();
+            $a->delete('articles',"id='$id'");
         }
 
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
