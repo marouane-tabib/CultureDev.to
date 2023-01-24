@@ -5,12 +5,11 @@
         public function add($title , $category_id , $description){
             $title = htmlspecialchars(strip_tags($title));
             $category = htmlspecialchars(strip_tags($category_id));
-            // $description = htmlspecialchars(strip_tags($description));
 
             $a = new database();
             $a->insert('articles',['title'=>$title,'category_id'=>$category,'description'=>$description , 'user_id'=> $_SESSION['user_info']['user_id'] , 'date' => date('d-m-y h:i:s')]);
             if ($a == true) {
-                $this->sessionGenerator('success' , "Product Add Successfully");
+                $this->sessionGenerator('success' , "Article Add Successfully");
             }
         }
 
@@ -25,6 +24,7 @@
         public function destroy($id){
             $a = new database();
             $a->delete('articles',"id='$id'");
+            $this->sessionGenerator('success' , "Article Delete Successfully");
         }
 
         public function edit($id){
@@ -39,6 +39,7 @@
             $a = new database();
             $a->update('articles',['title'=>$title,'category_id'=>$category,'description'=>$description],"id='$id'");
             if ($a == true) {
+                $this->sessionGenerator('success' , "Article Updated Successfully");
                 header('location:home.php');
             }
         }
