@@ -6,6 +6,13 @@ body {
   background-image: radial-gradient(rgba(68, 76, 247, 0.4196078431) 1px, rgba(229, 229, 247, 0.4392156863) 1px);
   background-size: 20px 20px;
 }
+body .main-style {
+  background: rgba(255, 255, 255, 0.2666666667) !important;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border: solid 0.7px rgba(204, 204, 204, 0.6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.0666666667);
+}
 
 nav.navbar {
   background: rgba(255, 255, 255, 0.2666666667) !important;
