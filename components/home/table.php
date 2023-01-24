@@ -9,11 +9,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>...</td>
-            </tr>
+            <?php while ($article = mysqli_fetch_assoc($articles)) { ?>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><?= $article['title'] ?></td>
+                    <td><?= $article['category'] ?></td>
+                    <td><?= $article['description'] ?></td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
