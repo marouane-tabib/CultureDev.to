@@ -8,6 +8,12 @@
             $result = $b->sql;
             return $result;
         }
+        
+        public function destroy($id){
+            $a = new database();
+            $a->delete('categories',"id='$id'");
+            $this->sessionGenerator('success' , "Article Delete Successfully");
+        }
 
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
             if ($status == "success") {
