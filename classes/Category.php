@@ -8,6 +8,16 @@
             $result = $b->sql;
             return $result;
         }
+
+        public function add($name){
+            $name = htmlspecialchars(strip_tags($name));
+
+            $a = new database();
+            $a->insert('categories',['name'=>$name]);
+            if ($a == true) {
+                $this->sessionGenerator('success' , "Category Add Successfully");
+            }
+        }
         
         public function destroy($id){
             $a = new database();
