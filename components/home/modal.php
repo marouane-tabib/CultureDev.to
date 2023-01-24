@@ -31,7 +31,10 @@
                         <label for="category" class="col-form-label">Category:</label>
                         <select class="form-control" name="category[]" id="category">
                             <option disabled selected>Select Your Category</option>
-                            <option value="1">Sports</option>
+                            <?php while ($row = mysqli_fetch_assoc($categoryResult)) { ?>
+                              <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                            <?php } ?>
+
                         </select>
                       </div>
                       <div class="mb-3">

@@ -3,6 +3,7 @@
     include '../classes/Article.php';
     $article = new Article();
     $articles = $article->show();
+    $categoryResult = $article->showCategories();
     if(isset($_POST['add'])){
       for ($i=0; $i < count($_POST['title']); $i++) { 
         $article->add($_POST["title"][$i] , $_POST["category"][$i] , $_POST['description'][$i]);
