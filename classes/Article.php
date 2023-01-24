@@ -35,6 +35,10 @@
             return $result;
         }
 
+        public function updateArticle($id){
+            // 
+        }
+
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
             if ($status == "success") {
                 $_SESSION['action'] = [
