@@ -3,8 +3,8 @@
         <thead>
             <tr>
             <th scope="col">#</th>
-            <th scope="col">name</th>
-            <th scope="col">action</th>
+            <th scope="col">Name</th>
+            <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +20,6 @@
                     <form action="categories.php" method="post" class="d-none" id="delete-category-<?php echo $row['id'] ?>" >
                         <input type="hidden" name="deleteCategory" value="<?php echo $row['id'] ?>" >
                     </form>
-                    <a href="#">Update</a>
                 </td>
             </tr>
             <?php } ?>
