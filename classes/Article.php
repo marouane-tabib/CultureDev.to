@@ -27,6 +27,14 @@
             $a->delete('articles',"id='$id'");
         }
 
+        public function edit($id){
+            $b = new database();
+            $b->select("articles","*" , "id = '$id'");
+            $sql = $b->sql;
+            $result = mysqli_fetch_assoc($sql);
+            return $result;
+        }
+
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
             if ($status == "success") {
                 $_SESSION['action'] = [
