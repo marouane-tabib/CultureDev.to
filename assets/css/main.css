@@ -7,6 +7,14 @@ body {
   background-size: 20px 20px;
 }
 
+nav.navbar {
+  background: rgba(255, 255, 255, 0.2666666667) !important;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border: solid 0.7px rgba(204, 204, 204, 0.6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.0666666667);
+}
+
 .data-form-box {
   padding: 10px 20px;
   border-radius: 5px;
