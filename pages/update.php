@@ -3,10 +3,10 @@
     include '../classes/Article.php';
     if($_GET['article_id']){
 
+        $id = $_GET['article_id'];
         $article = new Article();
         $item = $article->edit($id);
 
-        $id = $_GET['article_id'];
         if(isset($_POST['btn'])){
           $article = $article->updateArticle($id , $_POST['title'] , $_POST['category'] , $_POST['description']);
         }
