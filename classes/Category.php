@@ -1,9 +1,12 @@
 <?php 
     include 'database.php';
     class Category extends database{
-        
+
         public function show(){
-            // 
+            $b = new database();
+            $b->select("categories","*");
+            $result = $b->sql;
+            return $result;
         }
 
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
