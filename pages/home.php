@@ -4,7 +4,10 @@
     // session_start();
     $article = new Article();
     if(isset($_POST['btn'])){
-      $article->add($_POST["title"] , $_POST["category"] , $_POST['description']);
+      for ($i=0; $i < count($_POST['title']); $i++) { 
+        $article->add($_POST["title"][$i] , $_POST["category"][$i] , $_POST['description'][$i]);
+      }
+      die(var_dump($_POST));
     }
     if(!isset($_SESSION['user_info'])){
       header('location:login.php');
@@ -22,7 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script>
       $('#summernote').summernote({
-        placeholder: 'Hello stand alone ui',
+        // placeholder: 'Hello stand alone ui',
         tabsize: 2,
         height: 120,
         toolbar: [

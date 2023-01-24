@@ -25,18 +25,18 @@
                 <div class="modal-body">
                       <div class="mb-3">
                         <label for="title" class="col-form-label">Title:</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Add Articl Title ... ">
+                        <input type="text" class="form-control" id="title" name="title[]" placeholder="Add Articl Title ... ">
                       </div>
                       <div class="mb-3">
                         <label for="category" class="col-form-label">Category:</label>
-                        <select class="form-control" name="category" id="category">
+                        <select class="form-control" name="category[]" id="category">
                             <option disabled selected>Select Your Category</option>
                             <option value="1">Sports</option>
                         </select>
                       </div>
                       <div class="mb-3">
                         <label for="description" class="col-form-label">Description:</label>
-                        <textarea id="summernote" name="description"></textarea>
+                        <textarea id="summernote" name="description[]"></textarea>
                       </div>
                   </div>
               </div>
