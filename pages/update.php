@@ -2,7 +2,7 @@
 <?php 
     include '../classes/Article.php';
     if($_GET['article_id']){
-      
+
         $article = new Article();
         $item = $article->edit($id);
 
@@ -20,7 +20,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5 mb-1" id="exampleModalLabel">Add Your Article</h1>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
         </div>
         <div class="modal-body">
                 <div class="mb-3">
@@ -41,7 +40,6 @@
             </div>
         </div>
         <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
           <button type="submit" class="btn btn-primary" name="btn">Update</button>
         </div>
       </div>
