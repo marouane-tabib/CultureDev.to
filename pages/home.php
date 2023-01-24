@@ -10,6 +10,7 @@
       }
       die(var_dump($_POST));
     }
+    if(isset($_POST['delete'])){ die(); }
     if(!isset($_SESSION['user_info'])){
       header('location:login.php');
     }
