@@ -1,5 +1,5 @@
 
-    <table class="table bg-white">
+    <table class="table bg-white" id="myTable">
         <thead>
             <tr>
             <th scope="col">#</th>

@@ -56,4 +56,9 @@
     // });
   });
 </script>
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+  });
+</script>
 <?php include '../layouts/footer.php'; ?>
