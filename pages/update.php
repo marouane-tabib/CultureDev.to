@@ -2,10 +2,15 @@
 <?php 
     include '../classes/Article.php';
     if($_GET['article_id']){
-        $id = $_GET['article_id'];
+      
         $article = new Article();
         $item = $article->edit($id);
-    }
+
+        $id = $_GET['article_id'];
+        if(isset($_POST['btn'])){
+          $article = $article->updateArticle($id , $_POST['title'] , $_POST['category'] , $_POST['description']);
+        }
+    }else { header('location:home.php'); }
 ?>
 <section class="container">
     <h1>Update Article</h1>
@@ -26,7 +31,7 @@
                 <label for="category" class="col-form-label">Category:</label>
                 <select class="form-control" name="category" id="category">
                     <option disabled selected>Select Your Category</option>
-                    <option value="1">Sports</option>
+                    <option value="1" selected>Sports</option>
                 </select>
                 </div>
                 <div class="mb-3">

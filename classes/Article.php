@@ -35,8 +35,12 @@
             return $result;
         }
 
-        public function updateArticle($id){
-            // 
+        public function updateArticle($id , $title , $category , $description){
+            $a = new database();
+            $a->update('articles',['title'=>$title,'category_id'=>$category,'description'=>$description],"id='$id'");
+            if ($a == true) {
+                header('location:home.php');
+            }
         }
 
         public function sessionGenerator($status = "success" , $message = "WELCOME BACK ! Login Success ... "){
