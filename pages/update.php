@@ -16,7 +16,7 @@
 <section class="container">
     <h1>Update Article</h1>
     <div class="col-md-10 col-12 mx-auto bg-white p-2 shadow shadow-sm randed">
-        
+      
     <form action="update.php?article_id=<?= $_GET['article_id'] ?>" method="POST">
       <div class="modal-content">
         <div class="modal-header">
