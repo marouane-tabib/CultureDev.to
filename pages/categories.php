@@ -11,6 +11,12 @@
         $result = $category->destroy($_POST['deleteCategory']);
         header('location:categories.php');
     }
+    // Log Out
+      if(isset($_POST['logout'])){ session_destroy();header('location:login.php'); }
+    // End
+      if(!isset($_SESSION['user_info'])){
+        header('location:login.php');
+      }
 ?>
 <section class="container">
     <h1 class="container py-3 ">Categories Page</h1>
