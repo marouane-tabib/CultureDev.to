@@ -10,9 +10,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php while ($article = mysqli_fetch_assoc($articles)) { ?>
+            <?php $i=1; while ($article = mysqli_fetch_assoc($articles)) { ?>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row"><?= $i++ ?></th>
                     <td><?= $article['title'] ?></td>
                     <td><?= $article['category'] ?></td>
                     <td><?= $article['description'] ?></td>

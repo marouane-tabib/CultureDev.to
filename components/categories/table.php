@@ -8,9 +8,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+            <?php $i = 1 ; while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
-                <th scope="row">1</th>
+                <th scope="row"><?= $i++ ?></th>
                 <td><?= $row['name'] ?></td>
                 <td>
                     <a href="javascript:void(0)" onclick="if(confirm('Are You sure to delete this record?')){document.querySelector('#delete-category-<?php echo $row['id'] ?>').submit();} else {return false}"
