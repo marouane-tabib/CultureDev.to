@@ -34,12 +34,11 @@
                             <?php while ($row = mysqli_fetch_assoc($categoryResult)) { ?>
                               <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
                             <?php } ?>
-
                         </select>
                       </div>
                       <div class="mb-3">
                         <label for="description" class="col-form-label">Description:</label>
-                        <textarea id="summernote" name="description[]"></textarea>
+                        <textarea id="" name="description[]" class="form-control"></textarea>
                       </div>
                   </div>
               </div>
