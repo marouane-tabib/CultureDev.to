@@ -14,13 +14,13 @@
                 <a class="nav-link" href="categories.php">Categories</a>
                 </li>
             </ul>
-                        <a href="javascript:void(0)" onclick="if(confirm('Are You sure to Log out?')){document.querySelector('#log-out').submit();} else {return false}"
-                            class="nav-link float-end" id="delete-btn" style="text-decoration: none;">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </a>  
-                        <form action="home.php" method="post" class="d-none" id="log-out" >
-                            <input type="hidden" name="logout">
-                        </form>
+            <a href="javascript:void(0)" onclick="if(confirm('Are You sure to Log out?')){document.querySelector('#log-out').submit();} else {return false}"
+                class="nav-link float-end" id="delete-btn" style="text-decoration: none;">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>  
+            <form action="home.php" method="post" class="d-none" id="log-out" >
+                <input type="hidden" name="logout">
+            </form>
             </div>
         </div>
     </nav>
