@@ -1,6 +1,6 @@
  <!-- Button trigger modal -->
- <button type="button" class="btn btn-primary float-end mb-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
+ <button type="button" class="btn btn-primary float-end my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Article
 </button>
 
 <!-- Modal -->

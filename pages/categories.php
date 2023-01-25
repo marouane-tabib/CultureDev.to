@@ -13,7 +13,7 @@
     }
 ?>
 <section class="container">
-    <h1>Category Index</h1>
+    <h1 class="container py-3 ">Categories Page</h1>
     <form action="categories.php" method="post">
         <div class="mb-3 col-11 col-md-3 float-end">
             <input type="text" class="form-control" id="name" name="name" placeholder="Add Articl Name ... ">

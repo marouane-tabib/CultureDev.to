@@ -25,7 +25,7 @@
     }
 ?>
 <section class="container">
-    <h1>Index Page</h1>
+    <h1 class="container py-3 ">Home Page</h1>
     <?php 
         include '../components/home/statistic_cards.php';
         include '../components/home/modal.php';

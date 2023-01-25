@@ -1,5 +1,5 @@
 
-    <div class="row mx-auto">
+    <div class="row mx-auto mt-2">
       <div class="col-11 col-md main-style px-3 py-2 mx-1">
         Articles
         <h1 class="float-end"><?= $articles->num_rows ?></h1>
