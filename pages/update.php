@@ -6,6 +6,7 @@
         $id = $_GET['article_id'];
         $article = new Article();
         $item = $article->edit($id);
+        $categoryResult = $article->showCategories();
 
         if(isset($_POST['btn'])){
           $article = $article->updateArticle($id , $_POST['title'] , $_POST['category'] , $_POST['description']);
@@ -30,7 +31,9 @@
                 <label for="category" class="col-form-label">Category:</label>
                 <select class="form-control" name="category" id="category">
                     <option disabled selected>Select Your Category</option>
-                    <option value="1" selected>Sports</option>
+                    <?php while ($row = mysqli_fetch_assoc($categoryResult)) { ?>
+                      <option value="<?= $row['id'] ?>" <?php if($row['id'] == $item['category_id']){ echo "selected"; } ?> ><?= $row['name'] ?></option>
+                    <?php } ?>
                 </select>
                 </div>
                 <div class="mb-3">
