@@ -1,4 +1,4 @@
-
+<div class="table-responsive col-12">
     <table class="table bg-white main-style" id="myTable">
         <thead>
             <tr>
@@ -30,3 +30,4 @@
             <?php } ?>
         </tbody>
     </table>
+</div>
