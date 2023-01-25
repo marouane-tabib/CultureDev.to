@@ -20,6 +20,9 @@
         header('location:home.php');
       }
     // End
+    // Log Out
+      if(isset($_POST['logout'])){ session_destroy(); }
+    // End
     if(!isset($_SESSION['user_info'])){
       header('location:login.php');
     }
