@@ -5,6 +5,9 @@
     if(isset($_POST['btn'])){
         $user->login($_POST['username'] , $_POST['password']);
     }
+    if(isset($_SESSION['user_info'])){
+      header('location:home.php');
+    }
 ?>
 <?php include'../layouts/header.php'; ?>
     <div class="data-form-box bg-white mx-auto mt-5 col-md-6 col-12">
