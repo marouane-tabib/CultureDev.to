@@ -1,5 +1,5 @@
 <?php 
-    include 'database.php';
+    include_once 'database.php';
     class User extends database{
     function login($username , $password){
         session_start();
@@ -71,6 +71,15 @@
         }
         public function logOut(){
             // 
+        }
+
+        public function sumUsers(){
+            // $sql = "SELECT COUNT(DISTINCT first_name) AS sum_users FROM users";
+            $b = new database();
+            $b->select("users","COUNT(DISTINCT first_name) AS sum_users");
+            $sql = $b->sql;
+            $result = mysqli_fetch_assoc($sql);
+            return $result;
         }
 
         public function readyRegisterChecker($username , $password){
