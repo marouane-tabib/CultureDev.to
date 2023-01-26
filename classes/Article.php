@@ -22,12 +22,14 @@
         }
 
         public function destroy($id){
+            $id = htmlspecialchars(strip_tags($id));
             $a = new database();
             $a->delete('articles',"id='$id'");
             $this->sessionGenerator('success' , "Article Delete Successfully");
         }
 
         public function edit($id){
+            $id = htmlspecialchars(strip_tags($id));
             $b = new database();
             $b->select("articles","*" , "id = '$id'");
             $sql = $b->sql;
@@ -36,6 +38,11 @@
         }
 
         public function updateArticle($id , $title , $category , $description){
+            $id = htmlspecialchars(strip_tags($id));
+            $title = htmlspecialchars(strip_tags($title));
+            $category = htmlspecialchars(strip_tags($category));
+            $description = htmlspecialchars(strip_tags($description));
+            
             $a = new database();
             $a->update('articles',['title'=>$title,'category_id'=>$category,'description'=>$description],"id='$id'");
             if ($a == true) {
