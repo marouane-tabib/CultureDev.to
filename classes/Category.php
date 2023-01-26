@@ -20,6 +20,7 @@
         }
         
         public function destroy($id){
+            $id = htmlspecialchars(strip_tags($id));
             $a = new database();
             $a->delete('categories',"id='$id'");
             $this->sessionGenerator('success' , "Article Delete Successfully");
