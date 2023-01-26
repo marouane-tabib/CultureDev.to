@@ -15,11 +15,11 @@
         <form action="login.php" method="POST" data-parsley-validate>
             <div class="mb-3">
                 <label for="username" class="form-label">User Name</label>
-                <input type="text" data-parsley-required data-parsley-minlength="5" class="form-control" id="username" name="username" placeholder="Add Your User Name" minlength="4" maxlength="50">
+                <input type="text" data-parsley-required data-parsley-minlength="5" class="form-control" id="username" name="username" placeholder="Add Your User Name" minlength="5" maxlength="50">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" data-parsley-required data-parsley-minlength="5" class="form-control" id="password" name="password" placeholder="********" minlength="3" maxlength="20">
+                <input type="password" data-parsley-required data-parsley-minlength="5" class="form-control" id="password" name="password" placeholder="********" minlength="5" maxlength="20">
             </div>
             <div class="form-text mb-3">You Need an Account ? <a href="register.php">Register</a> Now</div>
             <div class="btn-box">

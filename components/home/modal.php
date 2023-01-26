@@ -6,7 +6,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <form action="home.php" method="POST">
+    <form action="home.php" method="POST" data-parsley-validate>
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5 mb-1" id="exampleModalLabel">Add Your Article</h1>
@@ -25,11 +25,11 @@
                 <div class="modal-body">
                       <div class="mb-3">
                         <label for="title" class="col-form-label">Title:</label>
-                        <input type="text" class="form-control" id="title" name="title[]" placeholder="Add Articl Title ... ">
+                        <input type="text" class="form-control" data-parsley-required data-parsley-minlength="5" id="title" name="title[]" placeholder="Add Articl Title ... ">
                       </div>
                       <div class="mb-3">
                         <label for="category" class="col-form-label">Category:</label>
-                        <select class="form-control" name="category[]" id="category">
+                        <select class="form-control" name="category[]" id="category"  data-parsley-required>
                             <option disabled selected>Select Your Category</option>
                             <?php while ($row = mysqli_fetch_assoc($categoryResult)) { ?>
                               <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
@@ -38,7 +38,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="description" class="col-form-label">Description:</label>
-                        <textarea id="" name="description[]" class="form-control"></textarea>
+                        <textarea id="" name="description[]" class="form-control"  data-parsley-required data-parsley-minlength="5"></textarea>
                       </div>
                   </div>
               </div>

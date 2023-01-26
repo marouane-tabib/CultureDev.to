@@ -17,19 +17,19 @@
     <h1>Update Article</h1>
     <div class="col-md-10 col-12 mx-auto bg-white p-2 shadow shadow-sm randed">
       
-    <form action="update.php?article_id=<?= $_GET['article_id'] ?>" method="POST">
+    <form action="update.php?article_id=<?= $_GET['article_id'] ?>" method="POST" data-parsley-validate>
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5 mb-1" id="exampleModalLabel">Add Your Article</h1>
         </div>
         <div class="modal-body">
                 <div class="mb-3">
-                <label for="title" class="col-form-label">Title:</label>
-                <input type="text" class="form-control" id="title" value="<?= $item['title'] ?>" name="title" placeholder="Add Articl Title ... ">
+                  <label for="title" class="col-form-label">Title:</label>
+                  <input type="text" class="form-control" data-parsley-required data-parsley-minlength="2" id="title" value="<?= $item['title'] ?>" name="title" placeholder="Add Articl Title ... ">
                 </div>
                 <div class="mb-3">
                 <label for="category" class="col-form-label">Category:</label>
-                <select class="form-control" name="category" id="category">
+                <select class="form-control" name="category" id="category"  data-parsley-required >
                     <option disabled selected>Select Your Category</option>
                     <?php while ($row = mysqli_fetch_assoc($categoryResult)) { ?>
                       <option value="<?= $row['id'] ?>" <?php if($row['id'] == $item['category_id']){ echo "selected"; } ?> ><?= $row['name'] ?></option>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="mb-3">
                 <label for="description" class="col-form-label">Description:</label>
-                <textarea id="summernote" name="description"><?= $item['description'] ?></textarea>
+                <textarea id="summernote" name="description"  data-parsley-required data-parsley-minlength="5" ><?= $item['description'] ?></textarea>
                 </div>
             </div>
         </div>
