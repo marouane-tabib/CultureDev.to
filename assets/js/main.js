@@ -25,3 +25,5 @@
     $(document).ready( function () {
         $('#myTable').DataTable();
     });
+// parsleyjs
+$('form').parsley();

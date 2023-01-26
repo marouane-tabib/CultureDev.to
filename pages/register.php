@@ -12,24 +12,24 @@
 <?php include'../layouts/header.php'; ?>
     <div class="data-form-box bg-white mx-auto mt-5 col-md-6 col-11">
         <h1>Register</h1><hr>
-        <form action="register.php" method="POST">
+        <form action="register.php" method="POST" data-parsley-validate>
             <div class="row">
                 <div class="mb-3 col">
                     <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First Name">
+                    <input type="text" class="form-control" data-parsley-required data-parsley-minlength="3"  id="firstName" name="first_name" placeholder="First Name">
                 </div>
                 <div class="mb-3 col">
                     <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Add Your Last Name">
+                    <input type="text" class="form-control" data-parsley-required data-parsley-minlength="3" id="lastName" name="last_name" placeholder="Add Your Last Name">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="username" class="form-label">User Name</label>
-                <input type="text" class="form-control" id="username" name="user_name" placeholder="Add Your User Name">
+                <input type="text" class="form-control" data-parsley-required data-parsley-minlength="5"  id="username" name="user_name" placeholder="Add Your User Name">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="*******">
+                <input type="password" class="form-control" data-parsley-required data-parsley-minlength="5"  id="password" name="password" placeholder="*******">
             </div>
             <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Confirm Password</label>

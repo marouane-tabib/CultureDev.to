@@ -2,12 +2,12 @@
     include_once 'database.php';
     class User extends database{
     function login($username , $password){
-        session_start();
+        // session_start();
         $username = htmlspecialchars(strip_tags($username));
         $password = htmlspecialchars(strip_tags($password));
 
         // Patterns ...
-        $passPattern = '/^[a-zA-Z][0-9a-zA-Z_]{2,23}[0-9a-zA-Z]$/';
+        $passPattern = '/^[a-zA-Z][0-9a-zA-Z_]{5,23}[0-9a-zA-Z]$/';
         $usernamePattern = '/^[a-z\d_]{5,20}$/i';
         
         if(preg_match($usernamePattern, $username) && preg_match($passPattern, $password)){

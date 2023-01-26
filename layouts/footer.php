@@ -5,6 +5,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script defer src="https://parsleyjs.org/dist/parsley.min.js"></script>
         <script src="../assets/js/main.js"></script>
     <!-- End Scripts -->
 </body>
